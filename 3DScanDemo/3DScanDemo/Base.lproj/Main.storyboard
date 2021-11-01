@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kaA-Pj-6qj">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="_DScanDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainPage" translatesAutoresizingMaskIntoConstraints="NO" id="KRP-5k-77a">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQg-KO-qFd">
+                                <rect key="frame" x="190" y="1045" width="455" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="StartButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapButton" destination="BYZ-38-t0r" eventType="touchDown" id="0BT-xP-2oj"/>
+                                    <segue destination="FRD-Uf-wE7" kind="show" identifier="startSeg" id="1rh-bJ-qMJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="820-ff-JT7"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="Svv-yt-9Iz" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="743.16546762589928" y="92.964824120603012"/>
+        </scene>
+        <!--Scan View Controller-->
+        <scene sceneID="obo-Wl-R5Y">
+            <objects>
+                <viewController storyboardIdentifier="ScanView" id="FRD-Uf-wE7" customClass="ScanViewController" customModule="_DScanDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hlE-4B-bdd">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="drI-dz-VVX"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="O6s-no-qJG"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="WdA-3L-uUL" kind="show" identifier="FinalSegue" id="6Wd-nM-tM0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QGl-Ql-UMu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1563" y="92"/>
+        </scene>
+        <!--Final Preview View Controller-->
+        <scene sceneID="Qey-og-vbC">
+            <objects>
+                <viewController id="WdA-3L-uUL" customClass="FinalPreviewViewController" customModule="_DScanDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8YV-pI-Mjw">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wpY-1M-87R" userLabel="BgColor">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UGCPreviewBg" translatesAutoresizingMaskIntoConstraints="NO" id="mNZ-JI-ngg">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UGCRef" translatesAutoresizingMaskIntoConstraints="NO" id="Lpc-5h-oS4">
+                                <rect key="frame" x="141" y="0.0" width="552" height="1194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qFX-Hi-IBQ" userLabel="UGCView">
+                                <rect key="frame" x="141" y="0.0" width="552" height="1194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DYa-iL-z61" userLabel="BGVideo">
+                                        <rect key="frame" x="0.0" y="0.0" width="552" height="1194"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dri-fitMid" translatesAutoresizingMaskIntoConstraints="NO" id="IKY-kc-nkF">
+                                        <rect key="frame" x="0.0" y="0.0" width="552" height="1194"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wAB-I6-l8S">
+                                        <rect key="frame" x="-141" y="0.0" width="834" height="1194"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </sceneKitView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KcZ-a0-vdz" userLabel="FrontVideo">
+                                        <rect key="frame" x="0.0" y="644" width="138" height="321"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="storm_female" id="ytZ-Eq-Nlr" userLabel="Storm_Female">
+                                        <rect key="frame" x="211" y="349" width="515" height="868"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="storm_male" translatesAutoresizingMaskIntoConstraints="NO" id="6Mu-s5-Y4f" userLabel="Storm_Male">
+                                        <rect key="frame" x="306" y="467" width="329" height="633"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dri_male" translatesAutoresizingMaskIntoConstraints="NO" id="qg3-Rb-cbD" userLabel="Dri_Male">
+                                        <rect key="frame" x="306" y="467" width="329" height="633"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dri_female" translatesAutoresizingMaskIntoConstraints="NO" id="rG4-WW-mK2" userLabel="Dri_Female">
+                                        <rect key="frame" x="306" y="467" width="329" height="633"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="therma_male" translatesAutoresizingMaskIntoConstraints="NO" id="JpA-ET-MZz" userLabel="Therma_Male">
+                                        <rect key="frame" x="272" y="438" width="396" height="691"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="therma_female" translatesAutoresizingMaskIntoConstraints="NO" id="kaG-V8-jFn" userLabel="Therma_Female">
+                                        <rect key="frame" x="211" y="388" width="487" height="790"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drifit4" translatesAutoresizingMaskIntoConstraints="NO" id="aQg-ci-Hid" userLabel="ImgCover">
+                                        <rect key="frame" x="0.0" y="0.0" width="552" height="1194"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vb8-Vy-Xd6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Lpc-5h-oS4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="ktA-3E-09A"/>
+                    <size key="freeformSize" width="834" height="1194"/>
+                    <connections>
+                        <outlet property="BGColor" destination="wpY-1M-87R" id="NWx-aN-Qc2"/>
+                        <outlet property="BGVid" destination="DYa-iL-z61" id="lBJ-Xe-GKt"/>
+                        <outlet property="FrontVi" destination="KcZ-a0-vdz" id="Znq-17-8HM"/>
+                        <outlet property="ImgCover" destination="aQg-ci-Hid" id="78n-Gh-GeA"/>
+                        <outlet property="MidLayer" destination="IKY-kc-nkF" id="2ZL-1E-TX5"/>
+                        <outlet property="UGCView" destination="qFX-Hi-IBQ" id="TR4-XF-dYz"/>
+                        <outlet property="dri_female" destination="rG4-WW-mK2" id="dWj-h9-uhb"/>
+                        <outlet property="dri_male" destination="qg3-Rb-cbD" id="HWm-Ep-Mg2"/>
+                        <outlet property="scnView" destination="wAB-I6-l8S" id="slB-FN-LYU"/>
+                        <outlet property="storm_female" destination="ytZ-Eq-Nlr" id="Hkj-vW-wl0"/>
+                        <outlet property="storm_male" destination="6Mu-s5-Y4f" id="I4T-kJ-3HJ"/>
+                        <outlet property="therma_female" destination="kaG-V8-jFn" id="W3a-af-kv1"/>
+                        <outlet property="therma_male" destination="JpA-ET-MZz" id="48N-0y-qmu"/>
+                        <segue destination="RlQ-gh-W4Z" kind="show" identifier="ScanSegue" id="1er-nN-lni"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKs-uG-Rr6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2481.294964028777" y="92.964824120603012"/>
+        </scene>
+        <!--DownloadQR View Controller-->
+        <scene sceneID="7fu-mF-VgC">
+            <objects>
+                <viewController id="RlQ-gh-W4Z" customClass="DownloadQRViewController" customModule="_DScanDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OSM-QU-aAa">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="irf-O6-TVA">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jth-vn-0f3" userLabel="UGCVidLayer">
+                                <rect key="frame" x="225" y="191" width="397" height="817"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ScanPageBGFinal-1" translatesAutoresizingMaskIntoConstraints="NO" id="Z2s-Fq-P2D">
+                                <rect key="frame" x="0.0" y="0.0" width="849" height="1205"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfV-h7-8ym">
+                                <rect key="frame" x="225" y="1038" width="95" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PwA-WO-Tko"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="S68-sc-R0t"/>
+                    <connections>
+                        <outlet property="ugcQr" destination="zfV-h7-8ym" id="98H-3L-cmc"/>
+                        <outlet property="ugcVid" destination="Jth-vn-0f3" id="dkR-cA-yFN"/>
+                        <segue destination="Svv-yt-9Iz" kind="unwind" identifier="unwindSeg" unwindAction="unwindToMain:" id="LS2-yY-X4Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hW-Pe-JE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3233" y="93"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="p0Y-Ki-8LE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kaA-Pj-6qj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nog-qj-gqw">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4wA-t4-yPW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeV-Nk-RIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.1640625" y="93.118594436310389"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MainPage" width="1689" height="2388"/>
+        <image name="ScanPageBGFinal-1" width="1689" height="2389"/>
+        <image name="StartButton" width="912" height="116"/>
+        <image name="UGCPreviewBg" width="1689" height="2386"/>
+        <image name="UGCRef" width="1171" height="2533"/>
+        <image name="dri-fitMid" width="1171" height="2533"/>
+        <image name="dri_female" width="1080" height="1080"/>
+        <image name="dri_male" width="1080" height="1080"/>
+        <image name="drifit4" width="1171" height="2533"/>
+        <image name="storm_female" width="1080" height="1080"/>
+        <image name="storm_male" width="1080" height="1080"/>
+        <image name="therma_female" width="1080" height="1080"/>
+        <image name="therma_male" width="1080" height="1080"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module StandardCyborgNetworking {
+  umbrella header "StandardCyborgNetworking-umbrella.h"
+
+  export *
+  module * { export * }
+}

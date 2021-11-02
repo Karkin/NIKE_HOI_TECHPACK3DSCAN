@@ -62,6 +62,10 @@ class ScanViewController: UIViewController, ScanningViewControllerDelegate {
         // for debugging only
         
         self.dismiss(animated: false, completion: {
+            self.appDelegate.isFinished = true
+            self.appDelegate.playerSex = 0
+            self.appDelegate.playerMode = 0
+            
             self.dismiss(animated: false, completion: nil)
             self.performSegue(withIdentifier: "FinalSegue", sender: nil)
         })
